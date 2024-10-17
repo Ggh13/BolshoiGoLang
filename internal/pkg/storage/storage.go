@@ -191,7 +191,7 @@ func (r Storage) SaveToJson() {
 		return
 	}
 
-	fmt.Println(string(jsonData)) // Вывод JSON-строки
+	fmt.Println(string(jsonData)) // Вывод JSON строки
 }
 
 func (r Storage) ReadJson() {
@@ -203,7 +203,8 @@ func (r Storage) ReadJson() {
 	}
 	defer file.Close() // Закрываем файл после завершения работы
 
-	// Чтение содержимого файла
+	n := 1
+	fmt.Println(n)
 	decoder := json.NewDecoder(file)
 
 	err = decoder.Decode(&r)
